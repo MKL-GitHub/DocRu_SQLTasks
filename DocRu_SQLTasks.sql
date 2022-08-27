@@ -43,5 +43,5 @@ FROM Cars
 WHERE Price =
      (SELECT MIN(Price) 
       FROM Cars AS SubCars
-      WHERE Cars.BrandID = SubCars.BrandID
+      WHERE Cars.BrandID = BrandID
       GROUP BY BrandID)
